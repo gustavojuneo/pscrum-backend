@@ -1,10 +1,7 @@
-import fastify from 'fastify'
+import { server } from './http'
+import './websocket'
 
-const app = fastify()
-
-app.get('/users', () => {})
-
-app
+server
   .listen({
     host: '0.0.0.0',
     port: process.env.PORT ? Number(process.env.PORT) : 3333,
